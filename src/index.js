@@ -10,7 +10,7 @@ import './public-path';
 
 function render(props) {
   const { container } = props;
-  ReactDOM.render(<App />, container ? container.querySelector('#react-sub-root') : document.querySelector('#react-sub-root'));
+  ReactDOM.render(<App />, container ? container.querySelector('#root') : document.querySelector('#root'));
 }
 
 if (!window.__POWERED_BY_QIANKUN__) {
