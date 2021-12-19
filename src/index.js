@@ -9,8 +9,8 @@ import './public-path';
 
 
 function render(props) {
-  const { container } = props;
-  ReactDOM.render(<App />, container ? container.querySelector('#root') : document.querySelector('#root'));
+  const { container, setGlobalState, onGlobalStateChange } = props;
+  ReactDOM.render(<App setGlobalState={setGlobalState} onGlobalStateChange={onGlobalStateChange}/>, container ? container.querySelector('#root') : document.querySelector('#root'));
 }
 
 if (!window.__POWERED_BY_QIANKUN__) {

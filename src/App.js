@@ -3,7 +3,8 @@ import Home from './pages/home';
 import About from './pages/about'
 import './App.css';
 
-function App() {
+function App(props) {
+
   return (
     <BrowserRouter basename={window.__POWERED_BY_QIANKUN__ ? '/react' : '/'}>
       <div className="app_react_sub">
@@ -13,7 +14,7 @@ function App() {
         </header>
         <div className="app_react_sub_body">
           <Routes>
-            <Route path='/' element={<Home />} />
+            <Route path='/' element={<Home {...props}/>} />
             <Route path='/about' element={<About />} />
           </Routes>
         </div>
