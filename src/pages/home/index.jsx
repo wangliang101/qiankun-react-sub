@@ -5,16 +5,16 @@ import React, {useState, useEffect} from 'react';
   const [text, setText] = useState('');
 
   const changeGlobalData = () => {
-    setGlobalState({
+    setGlobalState && setGlobalState({
       value: 'react-sub change data'
     }) 
   }
 
   useEffect(() => {
-    onGlobalStateChange((state, pre) => {
+    onGlobalStateChange && onGlobalStateChange((state, pre) => {
       setText(state)
     })
-  }, [])
+  }, [onGlobalStateChange])
 
   return(
     <div style={{display: 'flex', flexDirection: 'column'}}>
